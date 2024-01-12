@@ -10,7 +10,7 @@ const SellerSchema = new Schema({
 
 // Create the virtual url
 
-SellerSchema.Schema.virtual("url").get(function () {
+SellerSchema.virtual("url").get(function () {
   return `/catalog/seller/${this._id}`;
 });
 
