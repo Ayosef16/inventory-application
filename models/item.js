@@ -10,7 +10,7 @@ const ItemSchema = new Schema({
   stock: { type: Number, required: true },
   price: { type: Number, required: true },
   category: { type: Schema.Types.ObjectId, ref: "Category", required: true },
-  seller: { type: Schema.Types.ObjectId, ref: "Seller" },
+  seller: [{ type: Schema.Types.ObjectId, ref: "Seller" }],
 });
 
 // Create virtual url
