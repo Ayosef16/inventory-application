@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<html lang="en">
+  <%- include("partials/head") %>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2"><%- include("partials/nav")%></div>
+        <div class="col-sm-10">
+          <h1><%= title%></h1>
+          <p>
+            Welcome to my <em>Inventory Application</em>, a website where
+            companies can sell their products and customer can buy them.
+          </p>
+          <h1>Important Stats</h1>
+          <p>This website have the following records:</p>
+          <ul>
+            <li><strong>Items:</strong> <%= item_count %></li>
+            <li><strong>Categories:</strong> <%= category_count %></li>
+            <li><strong>Sellers:</strong> <%= seller_count %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
