@@ -32,3 +32,5 @@ router.get("/sellers", seller_controller.seller_list);
 
 // Get request for one seller.
 router.get("/seller/:id", seller_controller.seller_detail);
+
+module.exports = router;
